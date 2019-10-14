@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Quiz</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="header" class="header">
+        <div id="highScores" href="./highscores.html" style="display: none">
+          High Scores
+        </div>
+
+        <div class="text-center timer">
+          <div id="timer">
+            <div id="count"></div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-danger btn-lg" id="start">
+          Start Quiz
+        </button>
+        <div id="display"></div>
+      </div>
+
+      <div id="quiz" style="display: none">
+        <div id="question" class="question"></div>
+        <div id="choices">
+          <button
+            type="button"
+            class="btn btn-info choice"
+            id="A"
+            onclick="checkAnswer('A')"
+          ></button>
+          <button
+            type="button"
+            class="btn btn-info choice"
+            id="B"
+            onclick="checkAnswer('B')"
+          ></button>
+          <button
+            type="button"
+            class="btn btn-info choice"
+            id="C"
+            onclick="checkAnswer('C')"
+          ></button>
+          <button
+            type="button"
+            class="btn btn-info choice"
+            id="D"
+            onclick="checkAnswer('D')"
+          ></button>
+        </div>
+      </div>
+      <div id="finalScore" style="display: none">
+        <!-- show final score -->
+        <div class="score">Final Score</div>
+        <div class="score" id="yourScore"></div>
+        <!-- form to submit score -->
+        <form class="score">
+          <input placeholder="Your Name" id="name" />
+          <button type="button" class="btn btn-warning" id="add-btn">
+            Submit Score
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+.container {
+  background-color: aquamarine;
+  padding: 20px;
+  font-family: "Turret Road", cursive;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.body-main {
+  font-family: "Turret Road", cursive;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#start {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+/*header*/
+
+.myname {
+  background-color: rgb(146, 89, 146);
+  color: darkgrey;
+  margin-bottom: 0px;
+  margin-left: 150px;
+  padding: 5px 20px 5px 20px;
+}
+
+.header-main {
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*nav*/
+
+.navigation {
+  margin-right: 150px;
+}
+
+.button {
+  color: blueviolet;
+  margin-left: 15px;
+  margin-top: 50px;
+}
+
+/*body*/
+
+.headline {
+  border-bottom-color: rgb(150, 66, 228);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  color: rgb(150, 66, 228);
+}
+
+.content {
+  background-color: white;
+  border-color: gray;
+  border-style: solid;
+  border-width: 0.5px;
+  margin: 25px 150px 100px 150px;
+  padding: 24px;
+}
+
+.foto {
+  float: left;
+  height: 250px;
+  padding: 24px;
+  width: 220px;
+}
+
+/*images for portfolio projects*/
+
+.portfolio-image {
+  float: left;
+  height: 200px;
+  padding-right: 24px;
+  width: 100px;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-grid-image {
+  height: 200px;
+  width: 200px;
+}
+
+.section-content {
+  max-width: 800px;
+}
+
+.section-main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/*logo on project's images*/
+
+.logo {
+  background-color: rgb(150, 66, 228);
+  bottom: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.image-wrapper {
+  margin: 12px;
+  position: relative;
+}
+
+/*contacts*/
+
+.contacts {
+  font-size: 20px;
+}
+
+/*footer*/
+
+.footer-main {
+  background-color: rgb(180, 116, 180);
+  border-top-color: grey;
+  border-top-style: solid;
+  border-top-width: 4px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+/*__________________media queries__________________*/
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+  .content {
+    margin: 25px 100px 80px 100px;
+  }
+  .myname {
+    margin-left: 100px;
+  }
+  .navigation {
+    margin-right: 100px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+  .content {
+    margin: 40px 80px 40px 80px;
+  }
+  .myname {
+    margin-left: 80px;
+  }
+  .navigation {
+    margin-right: 80px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+  .content {
+    margin: 20px 30px 20px 30px;
+  }
+  .myname {
+    margin-left: 30px;
+  }
+  .navigation {
+    margin-right: 30px;
+  }
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .content {
+    margin: 3px 5px 3px 5px;
+  }
+  .myname {
+    margin-left: 5px;
+    padding: 5px 2px 5px 2px;
+  }
+  .navigation {
+    margin-right: 5px;
+  }
+}
