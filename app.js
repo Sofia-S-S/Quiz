@@ -1,5 +1,6 @@
 // Var
 var start = document.getElementById("start");
+var intro = document.getElementById("intro");
 var quiz = document.getElementById("quiz");
 var question = document.getElementById("question");
 var qImg = document.getElementById("qImg");
@@ -57,6 +58,7 @@ function startQuiz() {
   // hide start button
 
   start.style.display = "none";
+  intro.style.display = "none";
   // show questions
   showQuestion();
   //change display from none to visible

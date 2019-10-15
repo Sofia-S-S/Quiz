@@ -16,6 +16,7 @@
 
   <body>
     <div class="container">
+      <!--Header- Scores ans Timer -->
       <div id="header" class="header">
         <div id="highScores" href="./highscores.html" style="display: none">
           High Scores
@@ -26,13 +27,16 @@
             <div id="count"></div>
           </div>
         </div>
-
-        <button type="button" class="btn btn-danger btn-lg" id="start">
-          Start Quiz
-        </button>
-        <div id="display"></div>
       </div>
-
+      <!--Welcome Page-->
+      <div id="intro">
+        You have 40 seconds to answer 8 questions about food and drinks. Every
+        incorrect unswer will decrise your time by 10 seconds. Good Luck!
+      </div>
+      <button type="button" class="btn btn-danger btn-lg" id="start">
+        Start Quiz
+      </button>
+      <!--Questions Page-->
       <div id="quiz" style="display: none">
         <div id="question" class="question"></div>
         <div id="choices">
@@ -62,6 +66,7 @@
           ></button>
         </div>
       </div>
+      <!--Final Page-->
       <div id="finalScore" style="display: none">
         <!-- show final score -->
         <div class="score">Final Score</div>
