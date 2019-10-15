@@ -12,7 +12,7 @@ var yourScore = document.getElementById("yourScore");
 var finalScore = document.getElementById("finalScore");
 
 var addBtn = document.getElementById("add-btn");
-var name = document.getElementById("name");
+var nameTest = document.getElementById("nameTest");
 var mostRecentScore = localStorage.getItem("mostRecentScore");
 const MAX_HIGH_SCORES = 5;
 
@@ -87,21 +87,31 @@ function checkAnswer(answer) {
 function showScore() {
   // hide  qiuz
   quiz.style.display = "none";
-  highScores.style.display = "none";
+  highScores.style.display = "bloch";
 
   finalScore.style.display = "block";
   // show score
   yourScore.textContent = score;
+  storeScore();
 }
 
-function storeScore(event) {
-  event.preventDefault();
+function storeScore() {
   var highScores = {
-    yourScore: highScores,
-    name: name.value
+    yourScore: score,
+    name: nameTest.value
   };
 
   localStorage.setItem("highScores", JSON.stringify(highScores));
+}
+
+// score page
+function showHigh() {
+  quiz.style.display = "none";
+  finalScore.style.display = "none";
+  const highScoreList = document.getElementById("highScoresList");
+  const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+  highScoreList.innerHTML = highScores;
 }
 
 // see score page and subit
@@ -109,4 +119,6 @@ start.addEventListener("click", startTimer);
 
 start.addEventListener("click", startQuiz);
 
-addBtn.addEventListener("click", storeScore);
+addBtn.addEventListener("click", showScore);
+
+highScores.addEventListener("click", showHigh);
