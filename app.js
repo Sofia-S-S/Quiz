@@ -11,6 +11,8 @@ var choiceD = document.getElementById("D");
 var yourScore = document.getElementById("yourScore");
 var finalScore = document.getElementById("finalScore");
 
+var userNameAndScore = document.getElementById("highScoresList");
+
 var addBtn = document.getElementById("add-btn");
 var nameTest = document.getElementById("nameTest");
 var mostRecentScore = localStorage.getItem("mostRecentScore");
@@ -24,13 +26,13 @@ var score = 0;
 var timer = document.getElementById("timer");
 var start = document.getElementById("start");
 var display = document.getElementById("display");
-var score = "";
+var score = 0;
 
 //function setTime()
 // var minutes = minutesDisplay.value.trim();
 function startTimer() {
   timer = 5 * questions.length;
-  setInterval(function() {
+  setInterval(function () {
     timer--;
     if (timer >= 0) {
       count = document.getElementById("count");
@@ -98,7 +100,7 @@ function showScore() {
 function storeScore() {
   var highScores = {
     yourScore: score,
-    name: nameTest.value
+    name: nameTest.value,
   };
 
   localStorage.setItem("highScores", JSON.stringify(highScores));
@@ -108,10 +110,11 @@ function storeScore() {
 function showHigh() {
   quiz.style.display = "none";
   finalScore.style.display = "none";
-  const highScoreList = document.getElementById("highScoresList");
-  const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  //const highScoreList = document.getElementById("highScoresList");
+  const highestScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-  highScoreList.innerHTML = highScores;
+  userNameAndScore.innerHTML =
+    highestScores.name + ":" + highestScores.yourScore;
 }
 
 // see score page and subit
